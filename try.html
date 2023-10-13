@@ -1,0 +1,43 @@
+<!-- I want to dynamically add value to an existing array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="val"></label>
+    <input id="inp01" type="text" placeholder="Enter a value"/>
+    <!-- <button id="btn01"  onclick="AddElement()">Add Array</button> -->
+    <button onclick="AddElement()">Add to array</button>
+    <button id="btn02" onclick="displayArray()">Display Array</button>
+
+    <p id="p01"></p>
+
+    <script>
+        // var formm= document.querySelector('form');
+        
+        var addValue= document.getElementById('btn01');
+        var displayvalue= document.getElementById('btn02');
+        var p01= document.getElementById('p01');
+        
+        var arr=[];
+        
+        function AddElement(){
+            var inpo1= document.getElementById('inp01')
+            var content= inpo1.value;
+            arr.push(content)
+            inpo1.value=''
+            console.log(inp01)
+            
+            // location.reload()
+        }
+
+        function displayArray(){
+            p01.textContent= arr.join(',');
+    }
+
+    </script>
+</body>
+</html>
